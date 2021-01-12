@@ -1,0 +1,177 @@
+.mainHome{
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px;
+    padding-top: 75px;
+}
+
+.mainHomeBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mainHomeTitle{
+    width: 100%;
+    padding: 10%;
+    color: #000;
+    display: flex;
+}
+
+.mainHomeTitleContents{
+    flex: .7;
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.mainHomeTitleContents h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.mainHomainHomeTitleContentsmeTitle p{
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.mainHomeTitleContents span{
+    font-weight: 300;
+    font-size: 1.4rem;
+}
+
+.mainHomeTitleContents button{
+    margin-top: 30px;
+    width: 200px;
+    font-weight: 900;
+    color: #000;
+    /* background-color: #0095F6; */
+    background-color: #fff;
+    border: solid 1px #000;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.mainHomeImage{
+    flex: .3;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mainHomeImage img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.mainHomeBoxURL{
+    width: 100%;
+    background-color: #fff;
+    border: solid 1px #000;
+    padding: 10px 10px 0 10px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainHomeBoxURLInput{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainHomeBoxURL input{
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    border: solid 1px #000;
+    border-right: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: #000;
+}
+
+.mainHomeBoxURLInput span{
+    border: solid 1px #000;
+    border-left: none;
+    background-color: #fff;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.mainHomeBoxURLText{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.mainHomeBoxURLText p{
+    font-size: 1.5rem;
+    font-weight: 300; 
+}
+
+.mainHomeBoxURLText span{
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.mainHomeBoxURLText strong{
+    font-weight: 500;
+}
+
+.mainHomeBoxURLText button{
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    color: #000;
+    font-weight: 900;
+    border: solid 1px #000;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.mainHomeDesc{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.mainHomeDesc h2{
+    font-weight: 300;
+}
+
+.mainHomeDesc strong{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.rotate{
+    animation: rotateAnimation 2s linear infinite;
+}
+
+@keyframes rotateAnimation{
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-365deg);
+    }
+}

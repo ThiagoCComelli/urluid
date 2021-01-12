@@ -1,0 +1,52 @@
+.mainNavbar{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    position: fixed;
+    color: black;
+    display: flex;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.mainNavbarBox{
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.mainNavbarTitle{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.mainNavbarTitle h5{
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.mainNavbarTitle span{
+    transform: translateY(11px);
+}
+
+.mainNavbarBox ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.mainNavbarBox li{
+    cursor: pointer;
+    transition: .2s;
+    position: relative;
+    background-color: #fff;
+    padding: 5px;
+}

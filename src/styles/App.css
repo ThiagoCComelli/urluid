@@ -1,0 +1,13 @@
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.AppContents{
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
