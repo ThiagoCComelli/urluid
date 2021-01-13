@@ -79,7 +79,20 @@ const NewItem = ({stateIcon,setStateIcon}) => {
                 <span onClick={() => {copyToClipboard()}}>urluid.tk/<strong>{link}</strong></span>
                 <button onClick={() => {
                     setStateIcon(<LoopIcon style={{fontSize: 30}} className="rotate" />)
-                    if(data.url === "" || data.name === "" || data.customURL === ""){
+
+                    var err = false
+
+                    if(!state){
+                        if(data.url === "" || data.name === "" || data.customURL === ""){
+                            err = true
+                        }
+                    }else{
+                        if(data.url === ""){
+                            err = true
+                        }
+                    }
+
+                    if(err){
                         setStateIcon(<ErrorOutlineIcon style={{fontSize: 30, color: "red"}}/>)
                     }else{
                         api.generateUrl(data.url,user.uid,data.name,data.customURL).then((callback) => {
@@ -91,6 +104,7 @@ const NewItem = ({stateIcon,setStateIcon}) => {
                             setLink(callback.message)
                         })
                     }
+                    
                 }}>Generate</button>
             </div>
         </div>
@@ -123,7 +137,7 @@ const MyLinks = () => {
                         <th style={{width: "10%"}}>Config</th>
                     </tr>
                     {links.map((link) => {
-                        return <TableItem key={link.url} props={link}/>
+                        return <TableItem key={link.id} props={link}/>
                     })}
                 </tbody>
             </table>

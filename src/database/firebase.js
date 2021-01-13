@@ -24,7 +24,7 @@ var api = {
         if(url === ""){
             return false
         }
-        if(id === null){
+        if(id === null || id === ""){
             while(true){
                 const id = nanoid(7)
                 result = await db.collection('links').doc(id).get().then(async (doc) => {
@@ -36,7 +36,9 @@ var api = {
                             clicks: 0,
                             name: name
                         })
-                        return id
+                        return {message:id,status:"success"}
+                    }else{
+                        return {status:"error",message:"Error! DB Error"}
                     }
                 })
                 if(result){
