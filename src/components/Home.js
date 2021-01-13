@@ -1,9 +1,10 @@
 import React,{useState} from 'react';
 import {api} from '../database/firebase'
 import CheckIcon from '@material-ui/icons/Check';
-// import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 import LoopIcon from '@material-ui/icons/Loop';
 import {useHistory} from 'react-router-dom'
+// import {useSelector} from 'react-redux'
 
 import '../styles/Home.css'
 
@@ -11,6 +12,7 @@ const Home = (props) => {
     const [state, setState] = useState();
     const [link,setLink] = useState("")
     const history = useHistory()
+    // const user = useSelector(state => state.user)
 
     const copyToClipboard = () => {
         const element_ = document.createElement('textarea');
@@ -55,8 +57,12 @@ const Home = (props) => {
                         <button onClick={() => {
                             setState(<LoopIcon style={{fontSize: 30}} className="rotate" />)
                             api.generateUrl(document.getElementById("inputLink").value).then((callback) => {
-                                setState(<CheckIcon style={{fontSize: 30}}/>)
-                                setLink(callback)
+                                if(callback){
+                                    setState(<CheckIcon style={{fontSize: 30, color:"green"}}/>)
+                                    setLink(callback)
+                                } else {
+                                    setState(<ErrorOutlineIcon style={{fontSize: 30, color: "red"}}/>)
+                                }
                             })
                         }}>Generate</button>
                     </div>

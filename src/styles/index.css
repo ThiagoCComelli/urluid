@@ -5,9 +5,14 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-y: auto; */
+  overflow-x: hidden;
+  /* overflow: hidden; */
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+  scrollbar-color: #58B9F9 #fff; 
+  outline: none;
 }

@@ -4,23 +4,20 @@ import {api} from '../database/firebase'
 const Redirect = (props) => {
 
     useEffect(() => {
-        console.log(0)
         const getUrl = async () => {
-            console.log(props.match.params.id)
-            console.log(window.location.href)
-
             try{
                 if(props.match.params.id !== undefined){
                     const dataURL = await api.getLink(props.match.params.id)
+                    if(dataURL.data()){
+                        api.incrementClicks(props.match.params.id)
+                    }
                     var document_ = document.getElementById("getLink")
                     document_.setAttribute('href',dataURL.data().url)
                     document_.click()
-                    console.log(dataURL.data())
                 }
             }catch{
 
             }
-            
         }
 
         getUrl()

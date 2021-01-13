@@ -1,0 +1,78 @@
+.mainModalEdit{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainModalEditBox{
+    width: 900px;
+    background-color: #fff;
+    padding: 15px;
+    position: relative;
+}
+
+.mainModalEditButtons{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.mainModalEditButtons button{
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.mainModalEditButtons button:nth-child(1){
+    background-color: #58B9F9;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.mainModalEditButtons button:nth-child(2){
+    background-color: red;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.mainModalEditInput{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 10px 0;
+    flex-direction: column;
+}
+
+.mainModalEditInput p{
+    font-size: 1.4rem;
+    flex: .1;
+}
+
+.mainModalEditInput:nth-child(1){
+    align-items: center;
+}
+
+.mainModalEditInput input{
+    flex: .9;
+    width: 100%;
+    border: solid 1px rgb(0, 0, 0);
+    padding: 10px;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.closeIcon{
+    position: absolute;
+    right:15px;
+    cursor: pointer;
+}

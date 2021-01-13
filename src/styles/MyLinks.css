@@ -1,0 +1,130 @@
+.mainMyLinks{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mainTable{
+    width: 100%;
+    border: solid 1px #000;
+    background-color: #fff;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.tableTitle th{
+    font-size: 1.2rem;
+}
+
+.tableContent td{
+    padding: 10px;
+}
+
+.tableContent td:nth-child(4), .tableContent td:nth-child(5){
+    text-align: center;
+}
+
+.tableContent td button{
+    background-color: #fff;
+    border: solid 1px #000;
+    width: 70%;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.newItem{
+    width: 100%;
+    background-color: #fff;
+    border: solid 1px #000;
+    padding: 10px 10px 0 10px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+
+}
+
+.newItemInput{
+    width: 100%;
+    border: solid 1px #000;
+    display: flex;
+    padding-right: 10px;
+}
+
+.newItemState{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #AFAFAF;
+    
+}
+
+.newItemState span{
+    cursor: pointer;
+}
+
+.newItemInput input{
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    border-right: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: #000;
+
+    
+}
+
+.newItemInput span{
+    border-left: none;
+    background-color: #fff;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.newItemURLText{
+    width: 100%;
+    display: flex;
+    position: relative;
+    padding: 10px;
+    align-items: center;
+}
+
+.newItemURLText button{
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    color: #000;
+    font-weight: 900;
+    border-style: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.newItemURLText p{
+    font-size: 1.5rem;
+    font-weight: 300; 
+    margin-right: 10px;
+}
+
+.newItemURLText span{
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#inputIdAll{
+    margin-top: 20px;
+}

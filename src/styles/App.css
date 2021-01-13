@@ -11,3 +11,35 @@
   justify-content: center;
   position: relative;
 }
+
+.divCircles{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.circle{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  /* z-index: 20; */
+}
+
+.circle0{
+  background-color: #00DCFE;
+  left: -250px;
+  bottom: -250px;
+  position: absolute;
+  clip-path: circle(50%);
+  scale: 1.5;
+}
+
+.circle1{
+  background-color: #0095F6;
+  opacity: .65;
+  right: -250px;
+  top: -250px;
+  position: absolute;
+  clip-path: circle(50%);
+  scale: 2.5;
+}
