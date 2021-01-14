@@ -4,6 +4,7 @@ import {api} from '../database/firebase'
 const Redirect = (props) => {
 
     useEffect(() => {
+
         const getUrl = async () => {
             try{
                 if(props.match.params.id !== undefined){

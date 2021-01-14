@@ -1,8 +1,8 @@
-import {nanoid} from 'nanoid'
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 import {signOut,signIn} from '../actions/index'
+import {randomstring} from 'randomstring-js'
 
 var firebaseConfig = {
     apiKey: "AIzaSyCOQXbcw47uk1t24usSAzhOqmoawkLSMBU",
@@ -26,7 +26,7 @@ var api = {
         }
         if(id === null || id === ""){
             while(true){
-                const id = nanoid(7)
+                const id = randomstring(7)
                 result = await db.collection('links').doc(id).get().then(async (doc) => {
                     if(doc.data() === undefined){
                         await db.collection('links').doc(id).set({

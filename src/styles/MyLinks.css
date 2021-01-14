@@ -21,6 +21,7 @@
 
 .tableContent td{
     padding: 10px;
+    word-break: break-all;
 }
 
 .tableContent td:nth-child(4), .tableContent td:nth-child(5){
