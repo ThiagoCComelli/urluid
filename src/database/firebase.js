@@ -123,8 +123,8 @@ var api = {
             setLinks(docs.docs.map((item) => {return item.data()}))
         })
     },
-    incrementClicks: (id) => {
-        db.collection('links').doc(id).update({
+    incrementClicks: async (id) => {
+        await db.collection('links').doc(id).update({
             clicks: firebase.firestore.FieldValue.increment(1)
         })
     },

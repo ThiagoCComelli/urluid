@@ -57,12 +57,12 @@ const Home = (props) => {
                         <button onClick={() => {
                             setState(<LoopIcon style={{fontSize: 30}} className="rotate" />)
                             api.generateUrl(document.getElementById("inputLink").value).then((callback) => {
-                                if(callback){
+                                if(callback.status === "success"){
                                     setState(<CheckIcon style={{fontSize: 30, color:"green"}}/>)
-                                    setLink(callback)
                                 } else {
                                     setState(<ErrorOutlineIcon style={{fontSize: 30, color: "red"}}/>)
                                 }
+                                setLink(callback.message)
                             })
                         }}>Generate</button>
                     </div>

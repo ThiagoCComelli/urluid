@@ -9,9 +9,13 @@ const Redirect = (props) => {
             try{
                 if(props.match.params.id !== undefined){
                     const dataURL = await api.getLink(props.match.params.id)
+                    console.log(dataURL.data())
+                    console.log(dataURL.data().url)
                     if(dataURL.data()){
-                        api.incrementClicks(props.match.params.id)
+                        console.log("+1")
+                        await api.incrementClicks(props.match.params.id)
                     }
+                    console.log('Passou')
                     var document_ = document.getElementById("getLink")
                     document_.setAttribute('href',dataURL.data().url)
                     document_.click()
